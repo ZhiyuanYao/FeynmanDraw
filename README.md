@@ -1,5 +1,5 @@
 # FeynmanDraw
-A Tikz macro to draw high-quality Feynman diagrams in condensed matter physics
+A Tikz macro for easily drawing high-quality Feynman diagrams and a fortran program to automatically draw Feynamn diagrams in condensed matter physics.
 
 
 ## src
