@@ -3,7 +3,7 @@ A Tikz macro for easily drawing high-quality Feynman diagrams and a fortran prog
 
 
 ## src
-#### <font color=blue>tikz.tex</font>
+#### <font color=blue> tikz.tex </font>
 The tikz macro that defines primitives for drawing Feynman diagrams. For example, the following code will draw a particle-hole bubble,
 
 ```latex
