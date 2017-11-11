@@ -1,0 +1,206 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{graphicx}
+\usepackage{tikz}
+\input{/Users/zhiyuanyao/Dropbox/Utilities/LaTex/settings/src/tikz}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\begin{document}
+    
+    \begin{center}
+        Order 3 diagrams
+    \end{center}
+    
+    \setlength\LTleft{-40pt}            % default: \fill
+    \setlength\LTright{-40pt}           % default: \fill
+    \begin{longtable}{@{\extracolsep{\fill}}ccc@{}}
+        \hline\hline \\ [0.5ex] %inserts double horizontal lines
+\begin{tikzpicture}
+\def \R {0.8}
+\def \ratio {0.5}
+\tikzstyle{every node}=[draw, fill=yellow, circle,inner sep=.5pt,font=\tiny];
+\begin{scope}[yshift= -\R cm, scale=1, xscale = -1]
+\coordinate (a3) at (0.0000, 0);
+\coordinate (a2) at (1.0000, 0);
+\coordinate (a1) at (-1.0000, 0);
+\draw[bareG] (a3) -- (a1);
+\draw[bareG] (a2) -- (a3);
+\end{scope}
+\begin{scope}[xshift=0.0000*\R cm, yshift =1.0000*\R cm, yscale=0.6]
+\def \n {3}
+\def \r {1.7321*\ratio cm}
+\def \twist {30}
+\foreach \s in {1,...,\n}{
+\draw[bareG] ({360/\n * (\s - 1)+\twist}:\r) arc ({360/\n * (\s - 1)+\twist}:{360/\n * (\s)+\twist}:\r);}
+\coordinate (b1) at ({360/\n *(0)+\twist}:\r);
+\coordinate (b2) at ({360/\n *(1)+\twist}:\r);
+\coordinate (b3) at ({360/\n *(2)+\twist}:\r);
+\end{scope}
+\draw[bareU] (a1) -- (b1);
+\draw[bareU] (a2) -- (b2);
+\draw[bareU] (a3) -- (b3);
+\node at (a1){$1$};
+\node at (a2){$4$};
+\node at (a3){$5$};
+\node at (b1){$2$};
+\node at (b2){$3$};
+\node at (b3){$6$};
+\end{tikzpicture}
+&
+
+
+\begin{tikzpicture}
+\def \R {0.8}
+\def \ratio {0.5}
+\tikzstyle{every node}=[draw, fill=yellow, circle,inner sep=.5pt,font=\tiny];
+\begin{scope}[yshift= -\R cm, scale=1, xscale = -1]
+\coordinate (a6) at (-1.5000, 0);
+\coordinate (a5) at (-0.5000, 0);
+\coordinate (a4) at (0.5000, 0);
+\coordinate (a3) at (1.5000, 0);
+\coordinate (a2) at (2.5000, 0);
+\coordinate (a1) at (-2.5000, 0);
+\draw[bareG] (a6) -- (a1);
+\draw[bareU] (a1) to [bend left] (a4);
+\draw[bareG] (a2) -- (a3);
+\draw[bareU] (a2) to [bend right] (a5);
+\draw[bareG] (a3) -- (a4);
+\draw[bareU] (a3) to [bend right] (a6);
+\draw[bareG] (a4) -- (a5);
+\draw[bareG] (a5) -- (a6);
+\end{scope}
+\node at (a1){$1$};
+\node at (a2){$4$};
+\node at (a3){$5$};
+\node at (a4){$2$};
+\node at (a5){$3$};
+\node at (a6){$6$};
+\end{tikzpicture}
+&
+
+
+\begin{tikzpicture}
+\def \R {0.8}
+\def \ratio {0.5}
+\tikzstyle{every node}=[draw, fill=yellow, circle,inner sep=.5pt,font=\tiny];
+\begin{scope}[yshift= -\R cm, scale=1, xscale = -1]
+\coordinate (a6) at (-1.5000, 0);
+\coordinate (a5) at (-0.5000, 0);
+\coordinate (a4) at (0.5000, 0);
+\coordinate (a3) at (1.5000, 0);
+\coordinate (a2) at (2.5000, 0);
+\coordinate (a1) at (-2.5000, 0);
+\draw[bareG] (a6) -- (a1);
+\draw[bareU] (a1) to [bend left] (a5);
+\draw[bareG] (a2) -- (a3);
+\draw[bareU] (a2) to [bend right] (a4);
+\draw[bareG] (a3) -- (a4);
+\draw[bareU] (a3) to [bend right] (a6);
+\draw[bareG] (a4) -- (a5);
+\draw[bareG] (a5) -- (a6);
+\end{scope}
+\node at (a1){$1$};
+\node at (a2){$6$};
+\node at (a3){$4$};
+\node at (a4){$5$};
+\node at (a5){$2$};
+\node at (a6){$3$};
+\end{tikzpicture} \\
+
+\begin{tikzpicture}
+\def \R {0.8}
+\def \ratio {0.5}
+\tikzstyle{every node}=[draw, fill=yellow, circle,inner sep=.5pt,font=\tiny];
+\begin{scope}[yshift= -\R cm, scale=1, xscale = -1]
+\coordinate (a6) at (-1.5000, 0);
+\coordinate (a5) at (-0.5000, 0);
+\coordinate (a4) at (0.5000, 0);
+\coordinate (a3) at (1.5000, 0);
+\coordinate (a2) at (2.5000, 0);
+\coordinate (a1) at (-2.5000, 0);
+\draw[bareG] (a6) -- (a1);
+\draw[bareU] (a1) to [bend left] (a4);
+\draw[bareG] (a2) -- (a3);
+\draw[bareU] (a2) to [bend right] (a6);
+\draw[bareG] (a3) -- (a4);
+\draw[bareU] (a3) to [bend right] (a5);
+\draw[bareG] (a4) -- (a5);
+\draw[bareG] (a5) -- (a6);
+\end{scope}
+\node at (a1){$1$};
+\node at (a2){$6$};
+\node at (a3){$4$};
+\node at (a4){$2$};
+\node at (a5){$3$};
+\node at (a6){$5$};
+\end{tikzpicture}
+&
+
+
+\begin{tikzpicture}
+\def \R {0.8}
+\def \ratio {0.5}
+\tikzstyle{every node}=[draw, fill=yellow, circle,inner sep=.5pt,font=\tiny];
+\begin{scope}[yshift= -\R cm, scale=1, xscale = -1]
+\coordinate (a6) at (-1.5000, 0);
+\coordinate (a5) at (-0.5000, 0);
+\coordinate (a4) at (0.5000, 0);
+\coordinate (a3) at (1.5000, 0);
+\coordinate (a2) at (2.5000, 0);
+\coordinate (a1) at (-2.5000, 0);
+\draw[bareG] (a6) -- (a1);
+\draw[bareU] (a1) to [bend left] (a3);
+\draw[bareG] (a2) -- (a3);
+\draw[bareU] (a2) to [bend right] (a5);
+\draw[bareG] (a3) -- (a4);
+\draw[bareG] (a4) -- (a5);
+\draw[bareU] (a4) to [bend right] (a6);
+\draw[bareG] (a5) -- (a6);
+\end{scope}
+\node at (a1){$1$};
+\node at (a2){$6$};
+\node at (a3){$2$};
+\node at (a4){$3$};
+\node at (a5){$5$};
+\node at (a6){$4$};
+\end{tikzpicture}
+&
+
+
+\begin{tikzpicture}
+\def \R {0.8}
+\def \ratio {0.5}
+\tikzstyle{every node}=[draw, fill=yellow, circle,inner sep=.5pt,font=\tiny];
+\begin{scope}[yshift= -\R cm, scale=1, xscale = -1]
+\coordinate (a3) at (0.0000, 0);
+\coordinate (a2) at (1.0000, 0);
+\coordinate (a1) at (-1.0000, 0);
+\draw[bareG] (a3) -- (a1);
+\draw[bareG] (a2) -- (a3);
+\end{scope}
+\begin{scope}[xshift=0.0000*\R cm, yshift =1.0000*\R cm, yscale=0.6]
+\def \n {3}
+\def \r {1.7321*\ratio cm}
+\def \twist {30}
+\foreach \s in {1,...,\n}{
+\draw[bareG] ({360/\n * (\s - 1)+\twist}:\r) arc ({360/\n * (\s - 1)+\twist}:{360/\n * (\s)+\twist}:\r);}
+\coordinate (b1) at ({360/\n *(0)+\twist}:\r);
+\coordinate (b2) at ({360/\n *(1)+\twist}:\r);
+\coordinate (b3) at ({360/\n *(2)+\twist}:\r);
+\end{scope}
+\draw[bareU] (a1) -- (b1);
+\draw[bareU] (a2) -- (b3);
+\draw[bareU] (a3) -- (b2);
+\node at (a1){$1$};
+\node at (a2){$6$};
+\node at (a3){$4$};
+\node at (b1){$2$};
+\node at (b2){$3$};
+\node at (b3){$5$};
+\end{tikzpicture}
+\\  [0.5ex] 
+\hline
+\end{longtable}
+
+\end{document}
