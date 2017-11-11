@@ -20,7 +20,7 @@ A fortran program that automatically generates Latex source code when the topolo
 #### diagram topolgoy
 * For an order $n$ diagram, there are $2n$ vertexes. We specify the two vertexes of a single interaction line take consecutive numbers such as `1` and `2`,  `3` and `4`.
 
-* The topology is then determined by the `next(1:2n)` array where `i` and `next(i)` are connected by a Green's function line propagating from vertex `i` to `next(i)`, `i ----->---- next(i)`.
+* The topology is then determined by the `next(1:2n)` array where `i` and `next(i)` are connected by a Green's function line propagating from vertex `i` to `next(i)`, `i --->--- next(i)`.
 
 ## example
 
