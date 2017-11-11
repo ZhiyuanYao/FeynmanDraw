@@ -1,0 +1,27 @@
+\documentclass[margin=0pt,preview]{standalone}
+\usepackage{amsmath}
+\usepackage[svgnames]{xcolor}
+\input{tikz}
+
+\begin{document}
+
+\begin{equation*}
+    \Phi = 
+    \frac{1}{2} \times 
+    \begin{tikzpicture}[baseline=-0.5ex, scale=2]
+        \draw[boldG] (0,0) to[bend left=60] (1,0) ;
+        \draw[boldU] (0,0) -- (1,0);
+        \draw[boldG] (1,0) to[bend left=60] (0,0) ;
+    \end{tikzpicture}
+    + \frac{1}{4} \times 
+    \begin{tikzpicture}[baseline=-0.5ex, bend angle=70]
+        \draw[boldG] (0,0) -- (1,0); \draw[boldG] (1,0) -- (2,0);
+        \draw[boldG] (2,0) -- (3,0); \draw[boldG] (3,0) to[bend left=50] (0,0);
+        \draw[boldU] (0,0) to[bend left] (2,0);
+        \draw[boldU] (1,0) to[bend left] (3,0);
+    \end{tikzpicture}
+    + \cdots 
+\end{equation*}
+
+
+\end{document}
