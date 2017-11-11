@@ -1,0 +1,39 @@
+\documentclass[margin=10pt]{standalone}
+\usepackage[svgnames]{xcolor}
+%---------------------------- Tikz Libraries ------------------------------%  	
+\input{tikz}
+\begin{document}
+
+\begin{tikzpicture}
+    \def\L{1.45}
+    \def\H{1.6}
+    \matrix[column sep=.1cm]
+    {
+        &
+        \draw[boldG] (0,0) -- (\L,0) node[pos=0.5, above, yshift=0.2cm]{$G$};
+        & \node at (0,0) {$=$};
+        &  
+        \draw[bareG] (0.2*\L,0) -- (\L,0) node[pos=0.5, above, yshift=0.2cm]{$G_0$};
+        & \node at (0,0) {$+$};
+        & \draw[bareG] (0.2*\L,0) -- (\L,0) node[pos=0.5,above,yshift=+0.2cm]{$G_0$};
+        \draw[fill=gray!40] (\L, 0 ) .. controls (1.2*\L,0.3*\H) and (1.8*\L,0.3*\H) .. (2*\L,0) .. controls (1.8*\L,-0.3*\H) and (1.2*\L,-0.3*\H) .. cycle;
+        \node at (1.5*\L,0) {$\Sigma$};
+        \draw[boldG] (2*\L,0) -- (2.8*\L,0) node[pos=0.5,above,yshift=0.2cm]{$G$};
+        \\
+        &
+        \draw[boldU] (0,0) -- (\L,0) node[pos=0.5, above, yshift=0.2cm]{$W$};
+        & \node at (0,0) {$=$};
+        &  
+        \draw[bareU] (0.2*\L,0) -- (\L,0) node[pos=0.5, above, yshift=0.2cm]{$V$};
+        & \node at (0,0) {$+$};
+        & \draw[bareU] (0.2*\L,0) -- (\L,0) node[pos=0.5,above,yshift=+0.2cm]{$V$};
+        \draw[fill=gray!40] (\L, 0 ) .. controls (1.2*\L,0.3*\H) and (1.8*\L,0.3*\H) .. (2*\L,0) .. controls (1.8*\L,-0.3*\H) and (1.2*\L,-0.3*\H) .. cycle;
+        \node at (1.5*\L,0) {$\Pi$};
+        \draw[boldU] (2*\L,0) -- (2.8*\L,0) node[pos=0.5,above,yshift=0.2cm]{$W$};
+        \\
+    }; 
+\end{tikzpicture}
+
+
+
+\end{document}
