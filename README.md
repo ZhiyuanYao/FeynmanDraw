@@ -18,7 +18,7 @@ Detailed instruction on the usage of the defined primitive is contained in the f
 A fortran program that automatically generates Latex source code when the topology of the diagram is specified.
 
 ##### diagram topolgoy
-* For an order `n` diagram, there are `2n` vertexes. We specify the two vertexes of a single interaction line take integer numbers `2i-1` and `2i`,  2i-1 ~~~~~~ 2i.
+* For an order `n` diagram, there are `2n` vertexes. We specify the two vertexes of a single interaction line take integer numbers `2i-1` and `2i`,  `2i-1 ~~~~~~ 2i`.
 
 * The topology is then determined by the `next(1:2n)` array where `i` and `next(i)` are connected by a Green's function line propagating from vertex `i` to `next(i)`, `i --->--- next(i)`.
 
