@@ -26,7 +26,8 @@ The tikz macro that defines primitives for drawing Feynman diagrams. For example
 \end{equation*}
 ```
 draws the following diagram
-![](https://raw.githubusercontent.com/ZhiyuanYao/FeynmanDraw/master/example/Phi.png)
+
+![](https://raw.githubusercontent.com/ZhiyuanYao/FeynmanDraw/master/example/Phi.png)                       
 
 Detailed instruction on the usage of the defined primitive is contained in the file `tikz.tex`.
 
